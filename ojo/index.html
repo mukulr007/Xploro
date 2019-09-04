@@ -96,9 +96,17 @@
                 <div class="col-lg-6">
                     <div class="banner_text">
                         <div class="banner_text_iner">
+                            <form class="my-4" onsubmit="return false">
+                                <div class="form-group">
+                                    <!--<label for="event-code">Enter Event Code</label>-->
+                                    <input id="event-code" type="number" placeholder="Enter Event code" class="form-control" required >
+                                    <br>
+									<button type="submit" onclick="enterEvent()" class="btn_2">Enter</button>
+                                </div>
+                            </form>
                             <h1>Building Engaging Events</h1>
                             <p>Platform to boost the value of your meetings and events by captivating your audience through real-time engagement.</p>
-                            <a href="#" class="btn_2">try for free</a>
+                            <a href="admin.ojo.xploryo.com" class="btn_2">Try</a>
                         </div>
                     </div>
                 </div>
@@ -483,6 +491,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     </footer>
     <!--::footer_part end::-->
 
+    <script>
+        function enterEvent() {
+            let eventCode = document.getElementById('event-code').value;
+            console.log(eventCode);
+            window.location.href = "http://ojo.xploryo.com/shared-event/" + eventCode;
+        }
+    </script>
     <!-- jquery plugins here-->
     <script src="js/jquery-1.12.1.min.js"></script>
     <!-- popper js -->
